@@ -1,0 +1,23 @@
+#!/usr/bin/env groovy
+
+pipelineJob('semics_iot_backend') {
+    displayName('semics_iot_backend')
+parameters {
+        stringParam('Branch','master')
+    }
+
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/princemishra5/iot_backend')
+
+                    }
+                    branches('$Branch')
+                }
+            }
+            scriptPath('build.jenkins')
+        }
+    }
+ }
