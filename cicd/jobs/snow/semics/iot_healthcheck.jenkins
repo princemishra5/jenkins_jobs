@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-pipelineJob('semics_iot_healthcheck') {
-    displayName('semics_iot_healthcheck')
+pipelineJob('semics_iot_frontend') {
+    displayName('semics_iot_frontend')
 parameters {
         stringParam('Branch','master')
     }
